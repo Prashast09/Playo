@@ -1,6 +1,10 @@
-package ethens.playo.http;
+package ethens.playo.di.http;
 
+import dagger.Module;
+import dagger.Provides;
+import ethens.playo.http.HttpApiService;
 import java.util.concurrent.TimeUnit;
+import javax.inject.Named;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
@@ -11,9 +15,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by ethens on 29/10/17.
  */
 
-public class HttpModule {
+@Module public class HttpModule {
 
-  public HttpApiService provideAsyncRestAdapter() {
+  @Provides @Named("background") public HttpApiService provideAsyncRestAdapter() {
     Retrofit.Builder builder = new Retrofit.Builder();
     builder.client(getHttpClient())
         .baseUrl("http://hn.algolia.com/api/v1/")

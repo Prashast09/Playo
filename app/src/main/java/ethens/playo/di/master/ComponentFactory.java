@@ -2,7 +2,9 @@ package ethens.playo.di.master;
 
 import android.support.v7.app.AppCompatActivity;
 import ethens.playo.activity.PlayoApplication;
-import ethens.playo.http.HttpModule;
+import ethens.playo.di.dashboard.DashboardComponent;
+import ethens.playo.di.dashboard.DashboardModule;
+import ethens.playo.di.http.HttpModule;
 
 /**
  * Created by ethens on 29/10/17.
