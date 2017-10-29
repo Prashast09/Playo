@@ -1,6 +1,9 @@
 package ethens.playo.di.dashboard;
 
 import dagger.Subcomponent;
+import ethens.playo.activity.DashboardActivity;
+import ethens.playo.activity.DashboardActivityViewHolder;
+import ethens.playo.activity.WebViewActivity;
 import ethens.playo.di.http.HttpModule;
 
 /**
@@ -8,4 +11,9 @@ import ethens.playo.di.http.HttpModule;
  */
 
 @Subcomponent(modules = { DashboardModule.class, HttpModule.class }) public interface DashboardComponent {
+  void inject(DashboardActivity dashboardActivity);
+
+  void inject(DashboardActivityViewHolder dashboardActivityViewHolder);
+
+  void inject(WebViewActivity webViewActivity);
 }

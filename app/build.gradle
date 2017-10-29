@@ -45,6 +45,7 @@ dependencies {
   compile 'com.android.support:recyclerview-v7:' + supportLibraryVersion
   compile 'com.android.support:support-v4:' + supportLibraryVersion
 
-
+  //Pub Sub library
+  compile 'de.greenrobot:eventbus:2.4.0'
 
 }
