@@ -21,6 +21,7 @@ android {
 
 dependencies {
   def retrofitVersion = '2.1.0'
+  def daggerVersion = '2.+'
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -33,5 +34,8 @@ dependencies {
   compile 'com.squareup.retrofit2:retrofit:' + retrofitVersion
   compile 'com.squareup.retrofit2:converter-gson:' + retrofitVersion
   compile 'com.squareup.retrofit2:adapter-rxjava:' + retrofitVersion
+
+  compile 'com.google.dagger:dagger:' + daggerVersion
+  annotationProcessor 'com.google.dagger:dagger-compiler:' + daggerVersion
 
 }
